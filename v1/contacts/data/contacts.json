@@ -1,0 +1,15 @@
+{
+    "Family": {
+        "Mom": {"email": "mom@example.com", "phone": "123-456-7890"},
+        "Dad": {"email": "dad@example.com", "phone": "987-654-3210"},
+        "Brother": {"email": "brother@example.com", "phone": "222-555-6789"}
+    },
+    "Friends": {
+        "Daisy": {"email": "daisy@example.com", "phone": "555-666-7777"},
+        "Xiaowen": {"email": "xiaowen@example.com", "phone": "444-555-6666"}
+    },
+    "Work": {
+        "John Smith": {"email": "john@example.com", "phone": "111-222-3333"},
+        "Jane Doe": {"email": "jane@example.com", "phone": "999-888-7777"}
+    }
+}
