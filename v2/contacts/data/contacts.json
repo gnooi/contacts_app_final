@@ -1,0 +1,26 @@
+{
+    "Family": [
+        {
+            "name": "Mom",
+            "email": "",
+            "phone": "111-222-4444"
+        },
+        {
+            "name": "Dad",
+            "email": "Dad@example.com",
+            "phone": ""
+        }
+    ],
+    "Friends": [
+        {
+            "name": "Daisy",
+            "email": "",
+            "phone": ""
+        },
+        {
+            "name": "Xiaowen",
+            "email": "",
+            "phone": ""
+        }
+    ]
+}

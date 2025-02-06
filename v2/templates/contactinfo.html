@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Contact Information for {{ name }}:</h2>
+
+{% if contact %}
+    <h4>Email address:</h4>
+    <p>{{ contact.email }}</p>
+    <h4>Phone:</h4>
+    <p>{{ contact.phone }}</p>
+{% else %}
+    <p>No contact details found.</p>
+{% endif %}
+
+<a href="{{ url_for('index') }}">Back to Home</a>
+{% endblock %}

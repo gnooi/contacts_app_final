@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Add a New Contact</h2>
+
+<form action="{{ url_for('add_contact') }}" method="POST" class="form-container">
+    <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{ name }}"required>
+    </div>
+
+    <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="{{ email }}">
+    </div>
+
+    <div>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" value="{{ phone }}">
+    </div>
+
+    <div>
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" value="{{ category }}" required>
+    </div>
+
+    <div>
+    <button type="submit">Add Contact</button>
+    </div>
+
+</form>
+<a href="{{ url_for('index') }}">Back to Home</a>
+{% endblock %}
