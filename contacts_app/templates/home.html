@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Contacts 
+    <a href="{{ url_for('add_contact') }}" class="add-contact">+</a>
+</h1>
+<ul>
+    {% for category in categories %}
+        <li>
+            <a href="{{ url_for('categories', category=category) }}">{{ category }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Add a New Contact</h2>
+
+<form method="POST" action="{% if session.get('original_contact') and category and name %}
+                                {{ url_for('update_contact', category=category, name=name) }}
+                            {% else %}
+                                {{ url_for('add_contact') }}
+                            {% endif %}" 
+                    class="form-container">
+                    
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ name }}" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ email }}">
+    </div>
+    
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" value="{{ phone }}">
+    </div>
+    
+    <div class="form-group">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" value="{{ category }}" required>
+    </div>
+    
+    <button type="submit">{{ 'Update Contact' if session.get('original_contact') else 'Add Contact' }}</button>
+</form>
+<a href="{{ url_for('index') }}">Back to Home</a>
+{% endblock %}

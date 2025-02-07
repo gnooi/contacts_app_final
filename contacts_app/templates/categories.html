@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% if contacts %}
+    <h3>Contacts in {{ title }} </h3>
+    <ul>
+        {% for contact in contacts %}
+        <li>
+            <a href="{{ url_for('contact_info', name=contact['name']) }}">{{ contact['name'].title() }}</a>
+            <a href="{{ url_for('edit_contact_form', category=title, name=contact['name']) }}">Edit</a>
+            <a href="{{ url_for('delete_contact', category=title, name=contact['name']) }}">Delete</a>        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No contacts found in {{ title }}.</p>
+{% endif %}
+<a href="{{ url_for('delete_category', category=title) }}">Delete Group</a>
+<a href="{{ url_for('index') }}">Back to Home</a>
+{% endblock %}
